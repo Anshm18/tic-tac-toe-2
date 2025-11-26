@@ -13,7 +13,6 @@ export default function ProtectedRoute({ children }) {
         localStorage.setItem("username", res.data.username);
         console.log("Token is valid");
     }).catch((err)=>{
-        token = undefined;
         console.log("Token is invalid");
         return (<Navigate to="/" replace />);
     });
